@@ -8,8 +8,8 @@ namespace _5by5_Iterator
 {
     public class Person
     {
-        public string Name { get; set; }
-        public int Age { get; set; }
+        private string Name { get; set; }
+        private int Age { get; set; }
 
         public Person(string name, int age)
         {
@@ -17,6 +17,16 @@ namespace _5by5_Iterator
             Age = age;
         }
 
+
+        public string GetName()
+        {
+            return this.Name;
+        }
+        public Person AddPerson(string name, int age)
+        {
+            return new Person(name, age);
+        }
+        
         public override string ToString()
         {
             return $"Nome: {Name}, Idade: {Age}";
